@@ -263,7 +263,7 @@ async function UpdateStatusLoop() {
     await UpdateDevices();
     await UpdateInstances();
     console.log(GetTimestamp() + "Finished RDM query");
-    setTimeout(UpdateStatusLoop, 5000);
+    setTimeout(UpdateStatusLoop, config.queryDelay * 1000);
 }
 
 function UpdateInstances() {
